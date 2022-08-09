@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-text">CURRENT WEATHER</div>
+			<div class="search-block">
+				<input
+					type="text"
+					id="search-input"
+					placeholder="Search"
+					value="Kiev"
+				/>
+				<img src="icons/search.png" id="search-button" />
+			</div>
+		</div>
+		<div class="main-container">
+			<div class="main-block">
+				<div class="header">
+					<div class="header-text" id="city-name"></div>
+					<div class="header-text" id="wather-date"></div>
+				</div>
+				<div class="weather-blocks">
+					<div class="weather-status weather-min-block">
+						<div id="weater-text"></div>
+						<img id="weather-img" />
+					</div>
+
+					<div id="weater-temp" class="weather-min-block"></div>
+
+					<div class="weater-datails weather-block">
+						<div class="detail-container">
+							<div class="datail-name">Min temperature</div>
+							<span id="min-temp"></span>
+						</div>
+						<div class="detail-container">
+							<div class="datail-name">Max temperature</div>
+							<span id="max-temp"></span>
+						</div>
+						<div class="detail-container">
+							<div class="datail-name">Wind speed(km/h)</div>
+							<span id="wind-speed"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="weather-hourly">
+				<div class="header">
+					<div class="header-text">Hourly</div>
+				</div>
+				<table>
+					<thead id="hourly-table-head"></thead>
+					<tbody id="hourly-table-body"></tbody>
+				</table>
+			</div>
+		</div>
+		<div class="error-container">
+			<div class="v-container">
+				<div class="v-container">
+					<b class="error-text">404</b>
+					<b>NOT FOUND</b>
+				</div>
+				<sub>Please enter different city</sub>
+			</div>
+		</div>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
